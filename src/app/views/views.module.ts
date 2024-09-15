@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
+import { AlumnoComponent } from './alumno/alumno.component';
+import { ProfesorComponent } from './profesor/profesor.component';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     LogoutComponent,
     NotfoundComponent,
     RecoverpwComponent,
-  LoginComponent],
+    LoginComponent,AlumnoComponent,
+    ProfesorComponent],
   imports: [
     CommonModule,
     ViewsRoutingModule,
