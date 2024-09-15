@@ -1,0 +1,13 @@
+<div class="cabecera">
+  <img src="./assets/img/logo duoc.png" alt="" class="logo">
+  <div class="content">
+    <h2>RegistrAPP</h2>
+    @if (nombre){
+      <p>Bienvenido: {{nombre}}</p>
+    }
+    <div class="links">
+      <a [routerLink] = "['/login']">Ingresar</a>
+      <a [routerLink] = "['/']">Salir</a>
+    </div>
+  </div>
+</div>

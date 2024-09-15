@@ -1,0 +1,19 @@
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+
+.links a {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
