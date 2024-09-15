@@ -1,7 +1,7 @@
 <ion-content>
   <div class="login-container">
     <div class="mobile-login">
-      <h2>LogIn</h2>
+      <h2>Login</h2>
       <form>
         <div class="form-group">
           <label for="email">Email</label>
@@ -10,9 +10,12 @@
         <div class="form-group">
           <label for="password">Password</label>
           <ion-input type="password" class="input"></ion-input>
-          <p class="error-message">Recorde me?</p>
+          <div class="me">
+            <p class="error-message">Remember me?</p>
+            <ion-checkbox></ion-checkbox>
+          </div>
         </div>
-        <ion-button >Login</ion-button>
+        <ion-button href="/home">Login</ion-button>
         <p class="forgot-password">Forgot Password?</p>
       </form>
     </div>
