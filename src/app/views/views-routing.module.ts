@@ -5,6 +5,11 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RecoverpwComponent } from './recoverpw/recoverpw.component';
+import { AlumnoComponent } from './alumno/alumno.component';
+import { ProfesorComponent } from './profesor/profesor.component';
+
+//linkear rutas a los componentes para que no se redireccione a la misma página(not Found)
+//en pocas palabras, si está declarado acá se podrá linkear
 
 const routes: Routes = [
   {
@@ -24,6 +29,12 @@ const routes: Routes = [
   },
   {
     path: 'recoverpw', component: RecoverpwComponent,
+  },
+  {
+    path: 'alumno', component: AlumnoComponent,
+  },
+  {
+    path: 'profesor', component: ProfesorComponent,
   }
 ];
 
