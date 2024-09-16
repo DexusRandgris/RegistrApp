@@ -1,0 +1,28 @@
+.header-al{
+  background-color: #0e82ffd7;
+  padding: 5px 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.header-al h2{
+    text-align: center;
+    color: yellow;
+    font-weight: bolder;
+    padding: 5px;
+}
+.logo{
+  max-height: 80px;
+  max-width: 80px;
+}
+
+ion-button {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --border-radius: 15px;
+}
+
+ion-item {
+  --inner-padding-top: 10px;
+  --inner-padding-bottom: 10px;
+}
