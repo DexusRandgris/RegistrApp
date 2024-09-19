@@ -1,4 +1,6 @@
+import { Subscription } from 'rxjs';
 import { Component, inject, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/servicios/auth.service';
 import { DatosService } from 'src/app/servicios/datos.service';
 
 @Component({
@@ -12,9 +14,19 @@ export class HomeComponent  implements OnInit {
 
   datos = inject(DatosService)
 
+  direccion: string = '';
+  private authService = inject(AuthService);
+
+  subscriptionAuthService: Subscription = new Subscription();
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.subscriptionAuthService = this.authService.direccion$.subscribe(direccion => {
+      this.direccion = direccion;
+      console.log('Header: ', direccion);
+    });
+  }
 
   saludar(){
     console.log("Hola: " + this.nombre);
