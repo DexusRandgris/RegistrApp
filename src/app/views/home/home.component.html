@@ -6,9 +6,21 @@
 </ion-item>
 <ion-button (click)="guardarNombre()">Saludar</ion-button> -->
 
-<div class="links">
+<!-- <div class="links">
   <a [routerLink]= "['/login']">Ingresar como Docente</a>
   <a [routerLink]= "['/login']">Ingresar como Alumno</a>
-</div>
+</div> -->
+
+@if (direccion === 'profesor@gmail.com'){
+  <div class="links">
+    <a [routerLink]= "['/profesor']">Ver lista de Asignaturas</a>
+  </div>
+}
+@if (direccion === 'alumno@gmail.com'){
+  <div class="links">
+    <a [routerLink]= "['/alumno']">Ver asistencia de Asignaturas</a>
+  </div>
+}
+
 <app-footer></app-footer>
 </ion-content>
