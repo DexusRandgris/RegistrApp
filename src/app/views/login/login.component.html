@@ -1,23 +1,21 @@
 <ion-content>
   <app-header></app-header>
-
-  <!-- @if (isLoading) {
-    <ion-spinner name="bubbles"></ion-spinner>
-  } -->
   <!-- Contenido del Login -->
-  <ion-item>
-    <ion-label position="floating">Correo</ion-label>
-    <ion-input [(ngModel)]="direccion"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Clave</ion-label>
-    <ion-input [(ngModel)]="clave" type="password"></ion-input>
-  </ion-item>
-  <ion-button (click)="login(direccion, clave)">Iniciar sesión</ion-button>
-  <!-- Mostrar mensaje de error si el login falla -->
-  <ion-text color="danger" *ngIf="loginFailed">
-    Usuario o clave incorrectos.
-  </ion-text>
-
+   <div class="login">
+    <h1>Ingrese sus datos</h1>
+    <ion-item class="ingresoD">
+      <ion-input [(ngModel)]="direccion" label="Email" label-placement="floating" fill="solid"></ion-input>
+    </ion-item>
+    <ion-item class="ingresoD">
+      <ion-input [(ngModel)]="clave" type="password"  label="Contraseña" label-placement="floating" fill="solid"></ion-input>
+    </ion-item>
+    <!-- Mostrar mensaje de error si el login falla -->
+    <ion-text color="danger" *ngIf="loginFailed">
+      Usuario o clave incorrectos.
+    </ion-text>
+    <div class="btn">
+      <ion-button shape="round" (click)="login(direccion, clave)">Iniciar sesión</ion-button>
+    </div>
+  </div>
   <app-footer></app-footer>
 </ion-content>
