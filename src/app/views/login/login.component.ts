@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { AuthService } from 'src/app/servicios/auth.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -51,4 +52,9 @@ export class LoginComponent  implements OnInit {
     });
   }
 
+  forgotPassword() {
+
+    this.router.navigate(['/recoverpw']);
+
+  }
 }
