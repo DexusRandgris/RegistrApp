@@ -10,10 +10,11 @@ import { AuthService } from 'src/app/servicios/auth.service';
 })
 export class HeaderComponent  implements OnInit {
 
-  nombre: string = '';
-  private sharedService = inject(DatosService);
 
   direccion: string = '';
+  nombre: string = '';
+   // @ts-ignore
+  nombreApellido;
   private authService = inject(AuthService);
 
   subscriptionDatos: Subscription = new Subscription();
@@ -22,14 +23,12 @@ export class HeaderComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.subscriptionDatos = this.sharedService.nombre$.subscribe(nombre =>{
-      this.nombre = nombre
-      console.log('Header: ', nombre);
-    });
-
     this.subscriptionAuthService = this.authService.direccion$.subscribe(direccion => {
       this.direccion = direccion;
-      console.log('Header: ', direccion);
+    });
+
+    this.subscriptionAuthService = this.authService.nombreApellido$.subscribe(nombreApellido => {
+      this.nombreApellido = nombreApellido;
     });
   }
 

@@ -1,26 +1,26 @@
 <ion-content>
-<app-header></app-header>
-<!-- <ion-item>
-  <ion-label position="floating">Nombre</ion-label>
-  <ion-input [(ngModel)]="nombre"></ion-input>
-</ion-item>
-<ion-button (click)="guardarNombre()">Saludar</ion-button> -->
+  <app-header></app-header>
+  <!-- <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-button (click)="guardarNombre()">Saludar</ion-button> -->
 
-<!-- <div class="links">
-  <a [routerLink]= "['/login']">Ingresar como Docente</a>
-  <a [routerLink]= "['/login']">Ingresar como Alumno</a>
-</div> -->
+  <!-- <div class="links">
+    <a [routerLink]= "['/login']">Ingresar como Docente</a>
+    <a [routerLink]= "['/login']">Ingresar como Alumno</a>
+  </div> -->
 
-@if (direccion === 'profesor@gmail.com'){
-  <div class="links">
-    <a [routerLink]= "['/profesor']">Ver lista de Asignaturas</a>
-  </div>
-}
-@if (direccion === 'alumno@gmail.com'){
-  <div class="links">
-    <a [routerLink]= "['/alumno']">Ver asistencia de Asignaturas</a>
-  </div>
-}
+  @if (rol === 'Profesor'){
+    <div class="links">
+      <a [routerLink]= "['/profesor']">Ver lista de Asignaturas</a>
+    </div>
+  }
+  @if (rol === 'Alumno'){
+    <div class="links">
+      <a [routerLink]= "['/alumno']">Ver asistencia de Asignaturas</a>
+    </div>
+  }
 
-<app-footer></app-footer>
-</ion-content>
+  <app-footer></app-footer>
+  </ion-content>

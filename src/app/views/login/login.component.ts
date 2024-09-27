@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { AuthService } from 'src/app/servicios/auth.service';
+import { usuariosSimulados } from 'src/app/models/data.models';
 
 @Component({
   selector: 'app-login',
@@ -31,19 +32,21 @@ export class LoginComponent  implements OnInit {
   constructor() { }
 
   login(direccion: string, clave: string): void{
-    this.authService.verfCuenta(direccion, clave);
+    this.authService.verfCuenta2(direccion, clave);
 
     this.authService.isAuthenticated$.subscribe(isAuthenticated => {
       if (isAuthenticated){
-        if(direccion === 'profesor@gmail.com'){
+        this.authService.rol$.subscribe(rol => {
+        if(rol === 'Profesor'){
           this.direccion = '';
           this.clave = '';
           this.router.navigate(['/profesor']);
-        } else if (direccion === 'alumno@gmail.com'){
+        } else if (rol === 'Alumno'){
           this.direccion = '';
           this.clave = '';
           this.router.navigate(['/alumno']);
         }
+      });
       }
       else{
         this.loginFailed = true;

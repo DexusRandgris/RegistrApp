@@ -11,11 +11,14 @@ import { DatosService } from 'src/app/servicios/datos.service';
 export class HomeComponent  implements OnInit {
 
   nombre: string = '';
+  // @ts-ignore
+  rol;
 
   datos = inject(DatosService)
 
   direccion: string = '';
   private authService = inject(AuthService);
+
 
   subscriptionAuthService: Subscription = new Subscription();
 
@@ -25,6 +28,10 @@ export class HomeComponent  implements OnInit {
     this.subscriptionAuthService = this.authService.direccion$.subscribe(direccion => {
       this.direccion = direccion;
       console.log('Header: ', direccion);
+    });
+
+    this.subscriptionAuthService = this.authService.rol$.subscribe(rol => {
+      this.rol = rol;
     });
   }
 
