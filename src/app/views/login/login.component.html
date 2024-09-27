@@ -13,6 +13,12 @@
     <ion-text color="danger" *ngIf="loginFailed">
       Usuario o clave incorrectos.
     </ion-text>
+    <!-- Botón para recuperar contraseña-->
+    <ion-item>
+      <ion-button shape="round" fill="outline" (click)="forgotPassword()">Olvidé mi contraseña</ion-button>
+    </ion-item>
+
+
     <div class="btn">
       <ion-button shape="round" (click)="login(direccion, clave)">Iniciar sesión</ion-button>
     </div>
