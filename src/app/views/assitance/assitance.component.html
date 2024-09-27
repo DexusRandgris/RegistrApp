@@ -1,0 +1,29 @@
+<ion-content>
+  <app-header></app-header>
+  <!-- <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-button (click)="guardarNombre()">Saludar</ion-button> -->
+
+  <!-- <div class="links">
+    <a [routerLink]= "['/login']">Ingresar como Docente</a>
+    <a [routerLink]= "['/login']">Ingresar como Alumno</a>
+  </div> -->
+
+  @if (direccion === 'profesor@gmail.com'){
+    <div class="links">
+      <a [routerLink]= "['/profesor']">Ver lista de Asignaturas</a>
+      <img src="assets/img/qr_1.png" alt="">
+
+    </div>
+  }
+  @if (direccion === 'alumno@gmail.com'){
+    <div class="links">
+      <a [routerLink]= "['/alumno']">Ver asistencia de Asignaturas</a>
+      <img src="assets/img/camera.png" alt="">
+    </div>
+  }
+
+  <app-footer></app-footer>
+  </ion-content>

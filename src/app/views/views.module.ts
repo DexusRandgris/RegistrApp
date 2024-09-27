@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesorComponent } from './profesor/profesor.component';
+import { AssitanceComponent } from './assitance/assitance.component';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { ProfesorComponent } from './profesor/profesor.component';
     NotfoundComponent,
     RecoverpwComponent,
     LoginComponent,AlumnoComponent,
-    ProfesorComponent],
+    ProfesorComponent,AssitanceComponent],
   imports: [
     CommonModule,
     ViewsRoutingModule,
