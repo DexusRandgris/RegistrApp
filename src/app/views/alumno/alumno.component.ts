@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { inject } from '@angular/core';
 
 @Component({
   selector: 'app-alumno',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlumnoComponent  implements OnInit {
 
+  private router = inject(Router)
+
   constructor() { }
+
+  asistencia(): void{
+    this.router.navigate(['/assistance']);
+  }
 
   ngOnInit() {}
 
