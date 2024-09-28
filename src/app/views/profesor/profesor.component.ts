@@ -20,6 +20,9 @@ export class ProfesorComponent  implements OnInit {
     this.router.navigate(['/assistance']);
   }
 
+  detalleAsignatura(): void{
+    this.router.navigate(['/detalle-asignatura']);
+  }
 
   ngOnInit() {}
 
