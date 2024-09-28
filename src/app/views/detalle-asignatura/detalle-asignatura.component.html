@@ -32,10 +32,16 @@
     </ion-accordion>
   </ion-accordion-group>
 
+  @if(direccion === 'profesor@gmail.com'){
   <div class="links">
-    <a [routerLink]= "['/alumno']">Volver a las asignaturas</a>
+    <a [routerLink]= "['/profesor']">Volver a las asignaturas</a>
   </div>
-
+  }
+  @if(direccion === 'alumno@gmail.com'){
+    <div class="links">
+      <a [routerLink]= "['/alumno']">Volver a las asignaturas</a>
+    </div>
+  }
   <app-footer></app-footer>
 
 </ion-content>
