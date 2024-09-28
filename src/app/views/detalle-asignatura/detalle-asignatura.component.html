@@ -34,11 +34,13 @@
 
   @if(direccion === 'profesor@gmail.com'){
   <div class="links">
+    <a [routerLink]="['/assistance']">Generar QR</a>
     <a [routerLink]= "['/profesor']">Volver a las asignaturas</a>
   </div>
   }
   @if(direccion === 'alumno@gmail.com'){
     <div class="links">
+      <a [routerLink]="['/assistance']">Escanear Asistencia</a>
       <a [routerLink]= "['/alumno']">Volver a las asignaturas</a>
     </div>
   }
