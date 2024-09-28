@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { AssitanceComponent } from './assitance/assitance.component';
+import { DetalleAsignaturaComponent } from './detalle-asignatura/detalle-asignatura.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AssitanceComponent } from './assitance/assitance.component';
     NotfoundComponent,
     RecoverpwComponent,
     LoginComponent,AlumnoComponent,
-    ProfesorComponent,AssitanceComponent],
+    ProfesorComponent,AssitanceComponent,
+    DetalleAsignaturaComponent],
   imports: [
     CommonModule,
     ViewsRoutingModule,
