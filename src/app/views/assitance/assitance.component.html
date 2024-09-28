@@ -13,15 +13,14 @@
 
   @if (direccion === 'profesor@gmail.com'){
     <div class="links">
-      <a [routerLink]= "['/profesor']">Ver lista de Asignaturas</a>
       <img src="assets/img/qr_1.png" alt="">
-
+      <a [routerLink]= "['/profesor']">Volver a las asignaturas</a>
     </div>
   }
   @if (direccion === 'alumno@gmail.com'){
     <div class="links">
-      <a [routerLink]= "['/alumno']">Ver asistencia de Asignaturas</a>
       <img src="assets/img/camera.png" alt="">
+      <a [routerLink]= "['/alumno']">Volver a las asignaturas</a>
     </div>
   }
 

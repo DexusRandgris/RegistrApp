@@ -17,6 +17,10 @@ export class AlumnoComponent  implements OnInit {
     this.router.navigate(['/assistance']);
   }
 
+  detalleAsignatura(): void{
+    this.router.navigate(['/detalle-asignatura']);
+  }
+
   ngOnInit() {}
 
 }
