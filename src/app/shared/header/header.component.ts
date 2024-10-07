@@ -27,7 +27,7 @@ export class HeaderComponent  implements OnInit {
       console.log('Header: ', nombre);
     });
 
-    this.subscriptionAuthService = this.authService.direccion$.subscribe(direccion => {
+    this.subscriptionAuthService = this.authService.usuario$.subscribe(direccion => {
       this.direccion = direccion;
       console.log('Header: ', direccion);
     });

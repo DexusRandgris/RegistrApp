@@ -19,7 +19,7 @@ export class AssitanceComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.subscriptionAuthService = this.authService.direccion$.subscribe(direccion => {
+    this.subscriptionAuthService = this.authService.usuario$.subscribe(direccion => {
       this.direccion = direccion;
       console.log('Header: ', direccion);
     });
