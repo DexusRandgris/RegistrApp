@@ -40,11 +40,20 @@ export class LoginComponent  implements OnInit {
         // Verificamos si usuarioCompleto no es null
         if (usuarioCompleto && usuarioCompleto.rol === "Docente") {
           // Aquí puedes hacer lo que necesites si el rol es "Docente"
+          this.usuario = ''; // Limpiar el campo de usuario
+          this.clave = ''; // Limpiar el campo de clave
+          this.router.navigate(['/profesor']); // Redirigir al usuario docente si el login es exitoso
         } else if (usuarioCompleto && usuarioCompleto.rol === "Alumno") {
           // Aquí puedes hacer lo que necesites si el rol es "Alumno"
+          this.usuario = ''; // Limpiar el campo de usuario
+          this.clave = ''; // Limpiar el campo de clave
+          this.router.navigate(['/alumno']); // Redirigir al usuario alumno si el login es exitoso
         } else {
           // Manejo en caso de que no haya un usuario completo
           console.error("Usuario no autenticado o rol desconocido");
+          this.usuario = ''; // Limpiar el campo de usuario
+          this.clave = ''; // Limpiar el campo de clave
+          this.loginFailed=true; // Mostrar mensaje de error si el login falla
         }
       });
     });

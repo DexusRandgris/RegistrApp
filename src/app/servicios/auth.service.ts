@@ -33,8 +33,6 @@ export class AuthService {
 
     const user = res.find(u => u.correo === usuario && u.clave === clave); // Buscar un usuario en la lista de usuarios de la API
     if (user) {
-      console.log('Autenticación exitosa!');  // Autenticación exitosa!
-      console.log(user);  // Nombre completo: Hel
       this.isAuthenticatedSubject.next(true); // Activar el estado de autenticación si la autenticación es correcta.
       this.usuarioSubject.next(user.nombre); // Actualizar el nombre completo del usuario autenticado.
       this.usuarioCompletoSubject.next(user); // Actualizar el usuario completo como objeto del usuario autenticado.
@@ -45,10 +43,9 @@ export class AuthService {
     }
   }
 
-
   logout(): void {
     this.usuarioSubject.next('');  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  //
-    this.usuarioCompletoSubject.next(null);
+    this.usuarioCompletoSubject.next(null); 
     this.isAuthenticatedSubject.next(false); // Desloguearse y desactivar el estado de autenticación.  // Desloguearse y
     this.loginFailedSubject.next(false);  // Restablecer loginFailed al cerrar sesión
   }
@@ -56,5 +53,4 @@ export class AuthService {
   isLoggedIn() {
     return this.isAuthenticated$; // Retornar el estado de autenticación
   }
-
 }
