@@ -17,11 +17,11 @@ export class ProfesorComponent  implements OnInit {
 
 
   asistencia(): void{
-    this.router.navigate(['/assistance']);
+    this.router.navigate(['/profesor-qr']);
   }
 
   detalleAsignatura(): void{
-    this.router.navigate(['/detalle-asignatura']);
+    this.router.navigate(['/detalle-profesor']);
   }
 
   ngOnInit() {}

@@ -40,6 +40,7 @@ export class AuthService {
     } else {
       this.isAuthenticatedSubject.next(false); // Desactivar el estado de autenticación si la autenticación es incorrecta.
       this.loginFailedSubject.next(true); // Establecer loginFailed a true si falla la autenticación
+      console.log(res);
     }
   }
 
