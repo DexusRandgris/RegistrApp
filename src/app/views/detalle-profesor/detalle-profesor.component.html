@@ -10,7 +10,19 @@
       </ion-item>
       <div class="ion-padding" slot="content">Por asignar</div>
     </ion-accordion>
-    <ion-accordion value="fourth">
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Cantidad de Alumnos</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Por definir</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Detalle asistencia</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">No registrado</div>
+    </ion-accordion>
+  <ion-accordion value="fourth">
       <ion-item slot="header" color="light">
         <ion-label>Descripcion asignatura</ion-label>
       </ion-item>
@@ -18,11 +30,10 @@
     </ion-accordion>
   </ion-accordion-group>
 
-    <div class="links">
-      <a [routerLink]="['/assistance']">Escanear Asistencia</a>
-      <a [routerLink]= "['/alumno']">Volver a las asignaturas</a>
-    </div>
-
+  <div class="links">
+    <a [routerLink]="['/assistance']">Generar QR</a>
+    <a [routerLink]= "['/profesor']">Volver a las asignaturas</a>
+  </div>
   <app-footer></app-footer>
 
 </ion-content>

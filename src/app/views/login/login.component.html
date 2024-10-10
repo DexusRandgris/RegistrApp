@@ -1,10 +1,10 @@
 <ion-content>
   <app-header></app-header>
   <!-- Contenido del Login -->
-   <div class="login">
+  <div class="login">
     <h1>Ingrese sus datos</h1>
     <ion-item class="ingresoD">
-      <ion-input [(ngModel)]="direccion" label="Email" label-placement="floating" fill="solid"></ion-input>
+      <ion-input [(ngModel)]="usuario" label="Email" label-placement="floating" fill="solid"></ion-input>
     </ion-item>
     <ion-item class="ingresoD">
       <ion-input [(ngModel)]="clave" type="password"  label="Contraseña" label-placement="floating" fill="solid"></ion-input>
@@ -20,7 +20,7 @@
 
 
     <div class="btn">
-      <ion-button shape="round" (click)="login(direccion, clave)">Iniciar sesión</ion-button>
+      <ion-button shape="round" (click)="login(usuario, clave)">Iniciar sesión</ion-button>
     </div>
   </div>
   <app-footer></app-footer>

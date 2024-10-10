@@ -13,6 +13,8 @@ import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { AssitanceComponent } from './assitance/assitance.component';
 import { DetalleAsignaturaComponent } from './detalle-asignatura/detalle-asignatura.component';
+import { ProfesorQrComponent } from './profesor-qr/profesor-qr.component';
+import { DetalleProfesorComponent } from './detalle-profesor/detalle-profesor.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { DetalleAsignaturaComponent } from './detalle-asignatura/detalle-asignat
     RecoverpwComponent,
     LoginComponent,AlumnoComponent,
     ProfesorComponent,AssitanceComponent,
-    DetalleAsignaturaComponent],
+    DetalleAsignaturaComponent,
+    ProfesorQrComponent,
+    DetalleProfesorComponent],
   imports: [
     CommonModule,
     ViewsRoutingModule,
