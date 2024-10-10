@@ -31,7 +31,7 @@ export class LoginComponent  implements OnInit {
 
   constructor() { }
 
-  login(direccion: string, clave: string): void{
+/*   login(direccion: string, clave: string): void{
     this.authService.verfCuenta(direccion, clave);
 
     this.authService.isAuthenticated$.subscribe(isAuthenticated => {
@@ -49,6 +49,34 @@ export class LoginComponent  implements OnInit {
       else{
         this.loginFailed = true;
       }
+    });
+  } */
+
+  isLoading: boolean = false;
+  async login(direccion: string, clave: string){
+    this.isLoading = true;
+    await this.authService.verfCuenta(direccion, clave);
+    this.isLoading = false;
+
+    this.authService.isAuthenticated$.subscribe(isAuthenticated => {
+      this.authService.usuarioCompleto$.subscribe(usuarioCompleto => {
+        if(isAuthenticated){
+          this.direccion = '';
+          this.clave = '';
+          if(usuarioCompleto && usuarioCompleto.rol === 'Docente'){
+            this.direccion = '';
+            this.clave = '';
+            this.router.navigate(['/profesor']);
+          } else{
+            this.direccion = '';
+            this.clave = '';
+            this.router.navigate(['/alumno']);
+          }
+        }
+        else{
+          this.loginFailed = true;
+        }
+      });
     });
   }
 

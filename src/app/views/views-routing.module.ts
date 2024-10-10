@@ -9,6 +9,7 @@ import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { AssitanceComponent } from './assitance/assitance.component';
 import { DetalleAsignaturaComponent } from './detalle-asignatura/detalle-asignatura.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 //linkear rutas a los componentes para que no se redireccione a la misma página(not Found)
 //en pocas palabras, si está declarado acá se podrá linkear
@@ -43,6 +44,9 @@ const routes: Routes = [
   },
   {
     path: 'detalle-asignatura', component: DetalleAsignaturaComponent
+  },
+  {
+    path:'registrar', component: RegistrarComponent
   }
 ];
 
