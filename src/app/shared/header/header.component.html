@@ -5,15 +5,15 @@
     @if (direccion === ''){
       <p>Hola, porfavor inicie sesion</p>
       <div class="links">
-        <a [routerLink] = "['/home']">Home</a>
-        <a [routerLink] = "['/login']">Ingresar</a>
+        <!-- <a [routerLink] = "['/home']">Home</a> -->
+        <a [routerLink] = "['/login']">Iniciar Sesion</a>
       </div>
     }
     @if (direccion){
       <p>Bienvenido: {{direccion}}</p>
       <div class="links">
-        <a [routerLink] = "['/home']">Home</a>
-        <a [routerLink] = "['/logout']">Salir</a>
+        <!-- <a [routerLink] = "['/home']">Home</a> -->
+        <a [routerLink] = "['/logout']">Cerrar Sesion</a>
       </div>
     }
   </div>

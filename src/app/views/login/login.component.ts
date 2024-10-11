@@ -63,4 +63,8 @@ export class LoginComponent  implements OnInit {
   forgotPassword() {
     this.router.navigate(['/recoverpw']); // Redirige a la página de recuperación de contraseña
   }
+
+  registrar(){
+    this.router.navigate(['/registrar']); // Redirige a la página de registro
+  }
 }

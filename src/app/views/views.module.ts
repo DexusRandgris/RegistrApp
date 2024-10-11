@@ -15,6 +15,7 @@ import { AssitanceComponent } from './assitance/assitance.component';
 import { DetalleAsignaturaComponent } from './detalle-asignatura/detalle-asignatura.component';
 import { ProfesorQrComponent } from './profesor-qr/profesor-qr.component';
 import { DetalleProfesorComponent } from './detalle-profesor/detalle-profesor.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { DetalleProfesorComponent } from './detalle-profesor/detalle-profesor.co
     ProfesorComponent,AssitanceComponent,
     DetalleAsignaturaComponent,
     ProfesorQrComponent,
-    DetalleProfesorComponent],
+    DetalleProfesorComponent,
+    RegistrarComponent],
   imports: [
     CommonModule,
     ViewsRoutingModule,
