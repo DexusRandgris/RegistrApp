@@ -1,0 +1,45 @@
+<ion-content>
+  <app-header></app-header>
+  <!-- Contenido del Login -->
+  <div class="login">
+    <h1>Registro</h1>
+    <ion-item class="ingresoD">
+      <ion-input [(ngModel)]="nombre" label="Nombre Completo" label-placement="floating" fill="solid"></ion-input>
+    </ion-item>
+    <ion-item class="ingresoD">
+      <ion-input [(ngModel)]="correo" label="Email" label-placement="floating" fill="solid"></ion-input>
+    </ion-item>
+    <ion-item class="ingresoD">
+      <ion-input [(ngModel)]="clave" type="password"  label="Contraseña" label-placement="floating" fill="solid"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Rol</ion-label>
+      <ion-select [(ngModel)]="rol">
+        <ion-select-option value="Docente">Docente</ion-select-option>
+        <ion-select-option value="Alumno">Alumno</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <!-- Botón para recuperar contraseña
+    <ion-item>
+      <ion-button shape="round" fill="outline">Olvidé mi contraseña</ion-button>
+    </ion-item> -->
+
+
+    <div class="btn">
+      <ion-button shape="round" (click)="registrar()">Registrar</ion-button>
+    </div>
+
+    <ion-item>
+      <ion-button shape="round" fill="outline" (click)="iniciarSesion()">¿Ya tienes cuenta?</ion-button>
+    </ion-item>
+
+    <div *ngIf="successMessage" style="color: green;" class="p-3">
+      <h2>{{ successMessage }}</h2>
+    </div>
+
+    <div *ngIf="errorMessage" style="color: rgb(255, 0, 0);" class="p-3">
+      <h2>{{ errorMessage }}</h2>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</ion-content>
