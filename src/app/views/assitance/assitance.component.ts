@@ -1,8 +1,6 @@
-import { AuthService } from './../../servicios/auth.service';
-import { Component, OnInit,OnDestroy,ElementRef, ViewChild, inject } from '@angular/core';
-import QRious from 'qrious';
+import { Component, OnInit, inject } from '@angular/core';
+import { AuthService } from 'src/app/servicios/auth.service';
 import { Subscription } from 'rxjs';
-
 
 @Component({
   selector: 'app-assitance',
