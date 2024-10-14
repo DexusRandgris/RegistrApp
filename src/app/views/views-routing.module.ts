@@ -12,6 +12,7 @@ import { DetalleAsignaturaComponent } from './detalle-asignatura/detalle-asignat
 import { ProfesorQrComponent } from './profesor-qr/profesor-qr.component';
 import { DetalleProfesorComponent } from './detalle-profesor/detalle-profesor.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { RegAsistenciaComponent } from './reg-asistencia/reg-asistencia.component';
 
 //linkear rutas a los componentes para que no se redireccione a la misma página(not Found)
 //en pocas palabras, si está declarado acá se podrá linkear
@@ -55,6 +56,9 @@ const routes: Routes = [
   },
   {
     path: 'registrar', component: RegistrarComponent
+  },
+  {
+    path: 'reg-asistencia', component: RegAsistenciaComponent
   }
 ];
 

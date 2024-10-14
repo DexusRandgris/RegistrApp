@@ -16,6 +16,8 @@ import { DetalleAsignaturaComponent } from './detalle-asignatura/detalle-asignat
 import { ProfesorQrComponent } from './profesor-qr/profesor-qr.component';
 import { DetalleProfesorComponent } from './detalle-profesor/detalle-profesor.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { QRCodeModule } from 'angularx-qrcode';
+import { RegAsistenciaComponent } from './reg-asistencia/reg-asistencia.component';
 
 
 @NgModule({
@@ -28,13 +30,15 @@ import { RegistrarComponent } from './registrar/registrar.component';
     DetalleAsignaturaComponent,
     ProfesorQrComponent,
     DetalleProfesorComponent,
-    RegistrarComponent],
+    RegistrarComponent,
+    RegAsistenciaComponent],
   imports: [
     CommonModule,
     ViewsRoutingModule,
     IonicModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    QRCodeModule
   ]
 })
 export class ViewsModule { }
