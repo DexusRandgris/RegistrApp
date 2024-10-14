@@ -13,8 +13,8 @@ import QRious from 'qrious';
 })
 export class ProfesorComponent  implements OnInit {
 
-  private AuthService = inject(AuthService);
   usuario: string = '';
+  private authService = inject(AuthService);
 
   subscriptionAuthService: Subscription = new Subscription();
 
@@ -57,6 +57,10 @@ export class ProfesorComponent  implements OnInit {
     this.router.navigate(['/detalle-profesor']);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.subscriptionAuthService = this.authService.usuario$.subscribe(usuario => {
+      this.usuario = usuario;
+    });
+  }
 
 }
