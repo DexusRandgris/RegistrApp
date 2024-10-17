@@ -2,19 +2,18 @@
   <img src="./assets/img/logo duoc.png" alt="" class="logo">
   <div class="content">
     <h2>RegistrAPP</h2>
-    @if (direccion === ''){
-      <p>Hola, porfavor inicie sesion</p>
-      <div class="links">
-        <!-- <a [routerLink] = "['/home']">Home</a> -->
-        <a [routerLink] = "['/login']">Iniciar Sesion</a>
-      </div>
-    }
-    @if (direccion){
+    <p ngIf="direccion === ''">Hola, porfavor inicie sesion</p>
+    <div class="links">
+      <ng-container ngIf="!isLogin">
+        <!-- No mostrar el botón de "Iniciar Sesión" si estamos en '/' o '/login' -->
+        <a [routerLink]="['/login']">Iniciar Sesion</a>
+      </ng-container>
+    </div>
+    <ng-container *ngIf="direccion">
       <p>Bienvenido: {{direccion}}</p>
       <div class="links">
-        <!-- <a [routerLink] = "['/home']">Home</a> -->
-        <a [routerLink] = "['/logout']">Cerrar Sesion</a>
+        <a [routerLink]="['/logout']">Cerrar Sesion</a>
       </div>
-    }
+    </ng-container>
   </div>
 </div>
