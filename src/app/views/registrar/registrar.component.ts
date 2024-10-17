@@ -44,6 +44,16 @@ export class RegistrarComponent  implements OnInit {
     this.successMessage = '';
     this.registroFallido = false;
 
+    if (!this.nombre || !this.correo || !this.clave) {
+      this.nombre = '';
+      this.clave = '';
+      this.correo = '';
+      this.errorMessage = 'Todos los campos son obligatorios.';
+      this.registroFallido = true;
+      await this.mostrarAlerta('Error', this.errorMessage);
+      return;
+    }
+
     const usuarioExiste = await this.validarUsuarioExistente(this.correo);
     if(usuarioExiste){
       this.errorMessage = 'El correo electrónico ya se encuentra registrado';
@@ -62,7 +72,7 @@ export class RegistrarComponent  implements OnInit {
       await this.authService.registrarNuevoUsuario(nuevoUsuario);
       this.successMessage = 'Usuario registrado correctamente';
       await this.mostrarAlerta('Registro realizado', this.successMessage);
-    }catch (error) {
+    }catch(error) {
       this.errorMessage = 'Error al registrar al usuario. Intentalo nuevamente';
       this.registroFallido = true;
       await this.mostrarAlerta('Error', this.errorMessage);
